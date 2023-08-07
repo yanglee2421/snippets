@@ -1,0 +1,21 @@
+{
+  "include": ["src"],
+  "compilerOptions": {
+    // ** Build
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext"],
+    "skipLibCheck": true,
+
+    // ** Bundlder
+    "moduleResolution": "Bundler",
+    "isolatedModules": true,
+    "noEmit": true,
+
+    // ** Lint
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  }
+}
