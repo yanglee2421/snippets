@@ -17,8 +17,8 @@ try {
   await rm(distPath, { recursive: true });
 } catch {
 } finally {
-  const rollupOut = await build();
-  console.log("build complate", rollupOut);
+  await build();
+  console.log("build complate");
 }
 
 async function build() {
