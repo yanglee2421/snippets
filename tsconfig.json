@@ -10,7 +10,9 @@
     // ** Bundlder
     "moduleResolution": "Bundler",
     "isolatedModules": true,
-    "noEmit": true,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "outDir": "./dist",
 
     // ** Lint
     "strict": true,
