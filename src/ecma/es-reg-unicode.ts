@@ -1,4 +1,4 @@
-#! pnpm tsx
+#! deno run
 
 export function toTestUnicode(target: string) {
   // Chinese UTF16
