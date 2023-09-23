@@ -23,6 +23,3 @@ export function toTestUnicode(target: string) {
 
   return target;
 }
-
-const res = toTestUnicode("中文");
-console.log(res);
