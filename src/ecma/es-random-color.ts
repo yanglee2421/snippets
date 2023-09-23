@@ -12,7 +12,7 @@ function toRandom(max: number) {
   return Math.floor(range);
 }
 
-function randomColorPlus() {
+export function randomColorPlus() {
   const random = Math.random().toString(16).substring(2, 8);
   return `#${random}`;
 }

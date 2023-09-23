@@ -1,11 +1,12 @@
 export function microTask(fn: () => void) {
-  if (typeof Function === "function") {
+  if (typeof queueMicrotask === "function") {
     queueMicrotask(fn);
     return;
   }
 
   if (typeof Promise === "function") {
     Promise.resolve().then(fn);
+    return;
   }
 
   if (typeof MutationObserver === "function") {
@@ -13,6 +14,7 @@ export function microTask(fn: () => void) {
     const observer = new MutationObserver(fn);
     observer.observe(text, { characterData: true });
     text.data = "1";
+    return;
   }
 
   const nextTick = Reflect.get(Object(process), "nextTick");
