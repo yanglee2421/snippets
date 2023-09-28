@@ -1,8 +1,12 @@
 export * from "./es-call";
 
-// ** Number
-export * from "./num-to-even";
-export * from "./num";
-
 // ** Array
-export * from "./es-deduplicate";
+export * from "./es-array-deduplicate";
+
+// ** Reg
+export * from "./es-reg-pwd";
+export * from "./es-reg-unicode";
+export * from "./es-reg-zh";
+
+// ** Json
+export * from "./es-json-clone";
