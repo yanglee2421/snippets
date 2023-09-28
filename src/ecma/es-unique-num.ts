@@ -1,4 +1,4 @@
-#! pnpm tsx
+#! deno run
 
 export function uniqueNum(nums: number[]) {
   return nums.reduce((prev, item) => prev ^ item, 0);

@@ -1,6 +1,6 @@
-#! pnpm tsx
+#! deno run
 
-export function myNum() {
+export function logNumber() {
   // ** Decimal
   const num1 = 11;
 

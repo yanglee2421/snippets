@@ -1,6 +1,6 @@
-#! pnpm tsx
+#! deno run
 
-export function myProperty() {
+export function objKeys() {
   const object = {
     b: "b",
     c: "c",
@@ -19,11 +19,5 @@ export function myProperty() {
   for (const k in object) {
     kList.push(k);
   }
-  console.log("kList", kList.join());
-
-  const vList: string[] = [];
-  for (const v in object) {
-    vList.push(v);
-  }
-  console.log("vList", vList.join());
+  console.log("for in", kList.join());
 }
