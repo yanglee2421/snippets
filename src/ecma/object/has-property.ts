@@ -1,4 +1,4 @@
-#! pnpm tsx
+#! deno run
 
 export function hasProperty(object: Object, key: string | symbol) {
   // ** Recommend

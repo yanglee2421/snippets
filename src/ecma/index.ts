@@ -1,12 +1,20 @@
-export * from "./es-call";
-
 // ** Array
-export * from "./es-array-deduplicate";
+export * from "./array";
+
+// ** Function
+export * from "./function";
+
+// ** Math
+export * from "./math";
+
+// ** Number
+export * from "./number";
+
+// ** Object
+export * from "./object";
 
 // ** Reg
-export * from "./es-reg-pwd";
-export * from "./es-reg-unicode";
-export * from "./es-reg-zh";
+export * from "./reg-exp";
 
 // ** Json
-export * from "./es-json-clone";
+export * from "./json";

@@ -1,4 +1,4 @@
-#! pnpm tsx
+#! deno run
 
 export class MyObject extends Object {
   constructor(sign: number) {
