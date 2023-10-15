@@ -1,0 +1,10 @@
+.slide-heading__heading em {
+  --theme-em-gradient: linear-gradient(90deg, #7209d4, #2832d4 33%, #00a5b2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-image: var(--theme-em-gradient);
+  color: transparent;
+  display: inline;
+  font-style: normal !important;
+  font-weight: inherit !important;
+}
