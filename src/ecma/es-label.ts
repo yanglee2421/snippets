@@ -1,4 +1,4 @@
-#! pnpm tsx
+#! deno run
 
 export function myLabel() {
   outer: for (let i = 0; i < 10; i++) {

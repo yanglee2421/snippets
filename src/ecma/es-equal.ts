@@ -1,4 +1,4 @@
-#! pnpm tsx
+#! deno run
 
 export function esEqual() {
   const symbol = Symbol();

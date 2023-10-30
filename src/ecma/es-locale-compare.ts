@@ -1,4 +1,4 @@
-#! pnpm tsx
+#! deno run
 
 export function toSortByAccent(list: string[]) {
   return list.sort((curr, next) => {

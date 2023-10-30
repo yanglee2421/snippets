@@ -1,4 +1,4 @@
-#! pnpm tsx
+#! deno run
 
 const date = new Date();
 const dtfUS = new Intl.DateTimeFormat("es-US", {
