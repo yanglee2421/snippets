@@ -9,6 +9,7 @@ export function toDeduplicate(items: unknown[], ops: Partial<Ops> = {}) {
       console.error("Excepted an object");
       return;
     }
+
     if (!item) {
       console.error("Excepted an object, got a falsy!");
       return;
@@ -22,7 +23,11 @@ export function toDeduplicate(items: unknown[], ops: Partial<Ops> = {}) {
     }
 
     // Whether to allow overwriting
-    if (overwrite) return map.set(key, item);
+    if (overwrite) {
+      map.set(key, item);
+      return;
+    }
+
     map.get(key) ?? map.set(key, item);
   });
 
