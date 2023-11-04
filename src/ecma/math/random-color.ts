@@ -5,7 +5,7 @@ export function randomColor() {
   const g = toRandom(256);
   const b = toRandom(256);
   const a = Math.random().toFixed(2);
-  return `rgb(${r},${g},${b},${a})`;
+  return `rgba(${r},${g},${b},${a})`;
 }
 
 function toRandom(max: number) {
