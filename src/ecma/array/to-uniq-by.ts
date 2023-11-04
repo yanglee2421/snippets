@@ -1,4 +1,4 @@
-export function toDeduplicate(items: unknown[], ops: Partial<Ops> = {}) {
+export function toUniqBy(items: unknown[], ops: Partial<Ops> = {}) {
   const { overwrite = false, key = "id" } = ops;
 
   const map = new Map();
@@ -11,7 +11,7 @@ export function toDeduplicate(items: unknown[], ops: Partial<Ops> = {}) {
     }
 
     if (!item) {
-      console.error("Excepted an object, got a falsy!");
+      console.error("Excepted an object, got a null!");
       return;
     }
 
