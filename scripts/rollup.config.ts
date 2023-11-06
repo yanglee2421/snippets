@@ -7,7 +7,7 @@ import alias from "@rollup/plugin-alias";
 
 // NodeJs Imports
 import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, URL } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const extensions = [".js", ".ts", ".cjs", ".mjs"];
@@ -27,7 +27,7 @@ export default defineConfig({
     }),
     alias({
       entries: {
-        "@": resolve(__dirname, "../src"),
+        "@": fileURLToPath(new URL("../src", import.meta.url)),
       },
     }),
     // terser(),

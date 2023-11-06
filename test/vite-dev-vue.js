@@ -7,4 +7,4 @@ void ((port = 5173) => {
   mainTag.src = `http://localhost:${port}/src/main.ts`;
 
   document.body.append(viteTag, mainTag);
-})(port);
+})();
