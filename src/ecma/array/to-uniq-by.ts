@@ -1,7 +1,4 @@
-export function toUniqBy<TData extends Record<string | symbol, unknown>>(
-  items: TData[],
-  ops: Partial<Ops> = {}
-) {
+export function toUniqBy<TData>(items: TData[], ops: Partial<Ops> = {}) {
   const { overwrite = false, key = "id" } = ops;
 
   const map = new Map<unknown, TData>();
@@ -18,7 +15,7 @@ export function toUniqBy<TData extends Record<string | symbol, unknown>>(
       return;
     }
 
-    // Get Key
+    // Get key for map
     const mapKey = Reflect.get(item, key);
     if (!mapKey) {
       console.error("mapKey must be a truth, got a falsy!");
