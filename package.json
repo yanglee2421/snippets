@@ -20,9 +20,13 @@
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-terser": "^0.4.4",
     "@types/babel__core": "^7.20.3",
+    "@types/lodash": "^4.14.201",
     "@types/node": "^20.8.10",
     "rollup": "^3.29.4",
     "tsx": "^3.14.0",
     "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
   }
 }

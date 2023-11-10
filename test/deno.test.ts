@@ -1,16 +1,8 @@
 #! deno run
+import loadsh from "lodash";
 
-const event = "$pageview";
-
-const list = [
-  event === "$pageview" && {
-    key: "$current_url",
-    value: "vsr_click",
-    operator: "icontains",
-    type: "event",
+const list = loadsh.compact([
+  true && {
+    age: 18,
   },
-].filter(Boolean);
-
-console.log(list);
-
-export {};
+]);

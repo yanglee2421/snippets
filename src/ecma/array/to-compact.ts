@@ -1,3 +1,6 @@
-export function toCompact<TData>(list: TData[]) {
-  return list.filter(Boolean);
+// Type Imports
+import { Falsey } from "@/types";
+
+export function toCompact<TData>(list: Array<TData | Falsey>) {
+  return list.filter(Boolean) as TData[];
 }

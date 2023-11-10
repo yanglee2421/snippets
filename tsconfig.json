@@ -1,6 +1,9 @@
 {
   "include": ["src"],
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] },
+
     // ** Build
     "target": "ESNext",
     "module": "ESNext",
