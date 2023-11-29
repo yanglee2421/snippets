@@ -3,8 +3,8 @@
 
   var timer = 0;
   window.addEventListener("resize", function () {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
+    cancelAnimationFrame(timer);
+    timer = requestAnimationFrame(() => {
       var prevMenuList = this.document.querySelectorAll("[data-shopeo-rm]");
       Array.from(prevMenuList).forEach((node) => {
         node.remove();
@@ -79,9 +79,7 @@
       var mycontent = $(
         ".language a[data-gt-lang='" + GetUrlRelativePath() + "']"
       ).html();
-      console.log(
-        $(".language a[data-gt-lang='" + GetUrlRelativePath() + "']").html()
-      );
+
       $("#current").attr("data-gt-lang", GetUrlRelativePath());
       $("#current").html(mycontent);
     }
@@ -94,7 +92,7 @@
       "data-results-url",
       $("#search-filter-form-1313").attr("action")
     );
-    console.log($("#search-filter-form-1136").attr("action"));
+
     $(".searchandfilter ul li li").mouseover(function () {
       $(this).css("background", "#e5e5e5");
       $(this).css("color", "#E61926");
@@ -109,9 +107,12 @@
         $("#current").attr("data-gt-lang", $(this).attr("data-gt-lang"));
         $("#current").html($(this).html());
         var url = window.location.href;
-        if (GetUrlRelativePath() == "")
+        if (GetUrlRelativePath() == "") {
           window.location.replace(url + "/" + $(this).attr("data-gt-lang"));
-        else if (GetUrlRelativePath() == "en" || GetUrlRelativePath() == "ja") {
+        } else if (
+          GetUrlRelativePath() == "en" ||
+          GetUrlRelativePath() == "ja"
+        ) {
           window.location.replace(
             url.replace(
               "/" + GetUrlRelativePath() + "/",
@@ -220,14 +221,13 @@
     $(':checkbox[name="_sft_pa_gonglv[]"]').each(function () {
       glarray.push($(this).val());
     });
-    //  console.log(glarray.toString());
 
     $("#gonglvunit ,#gonglv input").on("change", function () {
       var filterarray = [];
       var glmin = parseInt($("#gonglvmin").val());
       var glmax = parseInt($("#gonglvmax").val());
       var glunit = $("#gonglvunit").val();
-      console.log(glarray);
+
       if (glmin > 0 && glmax > 0) {
         $.each(glarray, function (index, e) {
           var val = e.match(/\d+/)[0]; //数字部分
@@ -244,7 +244,7 @@
           var oldparam = parseUrlParams();
 
           var filterstr = filterarray.join();
-          console.log(filterstr);
+
           oldparam._sft_pa_gonglv = filterstr;
           oldparam.glmin = glmin;
           oldparam.glmax = glmax;
@@ -277,7 +277,7 @@
           .replace(/[\"\{\}]/g, "")
           .replace(/\:/g, "=")
           .replace(/\,/g, "&");
-      console.log(url, "urlurlurlurl");
+
       return url;
     }
   }
