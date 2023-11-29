@@ -56,6 +56,28 @@
 
     if (thisurl.indexOf("/ja/recruitment/recruitment-centre/")) {
     }
+    if (window.location.pathname.startsWith("/en/productcenter")) {
+      $('li.sf-item-106 > label[for^="sf-input-"]').text("Power Strip");
+      $('li.sf-item-47 > label[for^="sf-input-"]').text("Power Strip");
+    }
+
+    (function () {
+      $("#znbanner").hide();
+      $("#enbanner").hide();
+      $("#jabanner").hide();
+
+      if (window.location.pathname.startsWith("/en")) {
+        $("#enbanner").show();
+        return;
+      }
+
+      if (window.location.pathname.startsWith("/ja")) {
+        $("#jabanner").show();
+        return;
+      }
+
+      $("#znbanner").show();
+    })();
 
     if (getUrlParam("glmin")) {
       $("#gonglvmin").val(getUrlParam("glmin"));
