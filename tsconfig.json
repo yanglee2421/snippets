@@ -14,8 +14,9 @@
     "moduleResolution": "Bundler",
     "isolatedModules": true,
     "declaration": true,
-    "emitDeclarationOnly": true,
-    "outDir": "./dist",
+    // "emitDeclarationOnly": true,
+    // "outDir": "./dist",
+    "noEmit": true,
 
     // ** Lint
     "strict": true,
