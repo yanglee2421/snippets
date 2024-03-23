@@ -1,5 +1,3 @@
-#! deno run
-
 const object = {
   b: "b",
   c: "c",

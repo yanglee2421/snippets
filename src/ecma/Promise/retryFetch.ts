@@ -1,6 +1,4 @@
-#! deno run
-
-import { timeout } from "../../common/timeout.ts";
+import { timeout } from "./timeout";
 
 export async function retryFetch(failCount = 3) {
   try {

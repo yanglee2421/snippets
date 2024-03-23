@@ -1,4 +1,4 @@
-export function toJsonClone<TData = unknown>(params: TData) {
+export function jsonClone<TData = unknown>(params: TData) {
   try {
     const neoObject: TData = JSON.parse(JSON.stringify(params));
     return neoObject;

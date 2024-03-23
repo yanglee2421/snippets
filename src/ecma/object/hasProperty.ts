@@ -1,5 +1,3 @@
-#! deno run
-
 export function hasProperty(object: Object, key: string | symbol) {
   // ** Recommend
   const case1 = key in object;

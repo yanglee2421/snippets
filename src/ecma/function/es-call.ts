@@ -1,5 +1,3 @@
-#! deno run
-
 export class MyFunction extends Function {
   myCall(target: unknown) {
     const symbol = Symbol();
