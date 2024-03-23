@@ -1,4 +1,3 @@
-// NodeJs Imports
 import { resolve } from "node:path";
 import {
   copyFile,
@@ -10,21 +9,18 @@ import {
 } from "node:fs/promises";
 
 export async function copyDir(params: CopyDirParams) {
-  // ** Params
-  const { input, output } = params;
-
   // Output must can be accessed
   try {
-    await access(output, constants.R_OK);
+    await access(params.output, constants.R_OK);
   } catch {
-    await mkdir(output);
+    await mkdir(params.output);
   }
 
   // List Directory Contents
-  const list = await readdir(input);
+  const list = await readdir(params.input);
   for (const item of list) {
-    const neoInput = resolve(input, item);
-    const neoOutput = resolve(output, item);
+    const neoInput = resolve(params.input, item);
+    const neoOutput = resolve(params.output, item);
 
     const states = await stat(neoInput);
     const isDir = states.isDirectory();
@@ -42,6 +38,7 @@ export async function copyDir(params: CopyDirParams) {
     await copyFile(neoInput, neoOutput);
   }
 }
+
 interface CopyDirParams {
   input: string;
   output: string;

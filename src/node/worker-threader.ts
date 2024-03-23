@@ -1,5 +1,3 @@
-#! pnpm tsx
-
 import { fileURLToPath } from "node:url";
 import {
   Worker,
